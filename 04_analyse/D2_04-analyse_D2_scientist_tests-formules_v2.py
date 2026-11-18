@@ -3,7 +3,7 @@
 """
 Suite de tests unitaires formels des formules mathématiques (F1 à F16)
 Data Challenge Burkina 2026 — Défi 2
-Équipe : TEAMDATALYS
+
 
 Épigraphe :
 « On ne développe pas, on se développe » — l’éthique de l’éducation en Afrique : sur les traces de Joseph Ki-Zerbo

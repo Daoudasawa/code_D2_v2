@@ -1,4 +1,4 @@
-﻿region;ips_2015_2016;ips_2024_2025;delta_total_10ans;pente_annuelle_ips;r2_regression_ips;trajectoire_ips;pente_annuelle_ratio_effectifs;statut_initial;statut_final;inversion_parite
+region;ips_2015_2016;ips_2024_2025;delta_total_10ans;pente_annuelle_ips;r2_regression_ips;trajectoire_ips;pente_annuelle_ratio_effectifs;statut_initial;statut_final;inversion_parite
 CENTRE-NORD;0.948297604035309;0.9845559347313904;0.0363;0.0072;0.6308;FÃ©minisation marquÃ©e (Hausse IPS);0.0127;Filles défavorisées;Parité atteinte;OUI
 CENTRE-EST;0.9620958751393534;0.9771620141509034;0.0151;0.0065;0.5317;FÃ©minisation marquÃ©e (Hausse IPS);0.0067;Filles défavorisées;Parité atteinte;OUI
 EST;0.9776247848537004;0.9701538362838314;-0.0075;0.0057;0.3451;FÃ©minisation marquÃ©e (Hausse IPS);0.0079;Parité atteinte;Parité atteinte;NON

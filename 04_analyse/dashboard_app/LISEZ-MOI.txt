@@ -1,1 +1,1 @@
-Depuis la racine : python -m streamlit run 04_analyse/dashboard_app/TEAMDATALYS_04-analyse_D2_analyst_tableau-de-bord_v2.py
+Depuis la racine : python -m streamlit run 04_analyse/dashboard_app/D2_04-analyse_D2_analyst_tableau-de-bord_v2.py

@@ -1,4 +1,4 @@
-﻿annee_scolaire;annee_debut;annee_fin;urbain_garcons;urbain_filles;urbain_total;ips_urbain;profil_parite_urbain;rural_garcons;rural_filles;rural_total;ips_rural;profil_parite_rural;national_garcons;national_filles;national_total;ips_national;part_rural_pct;part_filles_rural_pct;ecart_ips_urbain_rural
+annee_scolaire;annee_debut;annee_fin;urbain_garcons;urbain_filles;urbain_total;ips_urbain;profil_parite_urbain;rural_garcons;rural_filles;rural_total;ips_rural;profil_parite_rural;national_garcons;national_filles;national_total;ips_national;part_rural_pct;part_filles_rural_pct;ecart_ips_urbain_rural
 2015-2016;2015;2016;389162;393521;782683;1.0112;Parité atteinte;1088644;1001722;2090366;0.9202;Filles défavorisées;1477806;1395243;2873049;0.9441;72.76;71.8;0.091
 2016-2017;2016;2017;403081;411415;814496;1.0207;Parité atteinte;1155446;1070860;2226306;0.9268;Filles défavorisées;1558527;1482275;3040802;0.9511;73.21;72.24;0.0939
 2017-2018;2017;2018;411480;419707;831187;1.02;Parité atteinte;1232722;1142110;2374832;0.9265;Filles défavorisées;1644202;1561817;3206019;0.9499;74.07;73.13;0.0935

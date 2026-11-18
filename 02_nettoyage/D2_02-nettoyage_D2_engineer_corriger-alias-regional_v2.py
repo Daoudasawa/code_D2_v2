@@ -6,7 +6,7 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
-TEAM = "TEAMDATALYS"
+TEAM = "D2"
 D = ROOT / "02_nettoyage"
 RAW = ROOT / "01_collecte" / f"{TEAM}_01-collecte_D2_engineer_dgess-prescolaire-primaire-brut_v1.xlsx"
 

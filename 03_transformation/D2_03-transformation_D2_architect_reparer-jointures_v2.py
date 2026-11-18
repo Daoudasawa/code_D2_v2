@@ -3,7 +3,7 @@ import csv
 import math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-TEAM="TEAMDATALYS"; N=ROOT/"02_nettoyage"; T=ROOT/"03_transformation"
+TEAM="D2"; N=ROOT/"02_nettoyage"; T=ROOT/"03_transformation"
 def read(path):
     with path.open(encoding="utf-8-sig",newline="") as f: return list(csv.DictReader(f,delimiter=";"))
 def write(path,rows):

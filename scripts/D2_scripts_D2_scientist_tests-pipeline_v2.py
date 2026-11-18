@@ -2,8 +2,8 @@ import csv, shutil, subprocess, sys, tempfile, unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 TRANS=ROOT/"03_transformation"; CLEAN=ROOT/"02_nettoyage"
-SCRIPT=TRANS/"TEAMDATALYS_03-transformation_D2_architect_reparer-jointures_v2.py"
-TEAM="TEAMDATALYS"
+SCRIPT=TRANS/"D2_03-transformation_D2_architect_reparer-jointures_v2.py"
+TEAM="D2"
 class PipelineV2Tests(unittest.TestCase):
  def test_panel_integrity_and_totals(self):
   p=TRANS/f"{TEAM}_03-transformation_D2_architect_panel-regional-education-10ans_v2.csv"

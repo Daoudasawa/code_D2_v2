@@ -16,7 +16,7 @@ TRANSFO_DIR = os.path.join(BASE_DIR, "03_transformation")
 ANALYSE_DIR = os.path.join(BASE_DIR, "04_analyse")
 os.makedirs(ANALYSE_DIR, exist_ok=True)
 
-EQUIPE = "TEAMDATALYS"
+PREFIX = "D2"
 DEFI = "D2"
 
 # 1. Chargement des panels
@@ -24,8 +24,8 @@ def load_csv(path):
     with open(path, "r", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f, delimiter=";"))
 
-panel_reg = load_csv(os.path.join(TRANSFO_DIR, f"{EQUIPE}_03-transformation_{DEFI}_architect_panel-regional-education-10ans_v2.csv"))
-panel_mil = load_csv(os.path.join(TRANSFO_DIR, f"{EQUIPE}_03-transformation_{DEFI}_engineer_panel-national-milieu-10ans_v2.csv"))
+panel_reg = load_csv(os.path.join(TRANSFO_DIR, f"{PREFIX}_03-transformation_{DEFI}_architect_panel-regional-education-10ans_v2.csv"))
+panel_mil = load_csv(os.path.join(TRANSFO_DIR, f"{PREFIX}_03-transformation_{DEFI}_engineer_panel-national-milieu-10ans_v2.csv"))
 
 regions = sorted(list(set(r["region"] for r in panel_reg)))
 annees = sorted(list(set(r["annee_scolaire"] for r in panel_reg)), key=lambda x: int(x[:4]))
@@ -39,7 +39,7 @@ for reg in regions:
         row[an] = reg_rows.get(an)
     matrice_data.append(row)
 
-MATRICE_PATH = os.path.join(ANALYSE_DIR, f"{EQUIPE}_04-analyse_{DEFI}_analyst_matrice-parite-regionale_v2.csv")
+MATRICE_PATH = os.path.join(ANALYSE_DIR, f"{PREFIX}_04-analyse_{DEFI}_analyst_matrice-parite-regionale_v2.csv")
 with open(MATRICE_PATH, "w", encoding="utf-8-sig", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=["region"] + annees, delimiter=";")
     writer.writeheader()
@@ -83,7 +83,7 @@ classement.sort(key=lambda x: x["distance_parite_absolue"], reverse=True)
 for idx, c in enumerate(classement, 1):
     c["rang_eloignement_parite"] = idx
 
-CLASSEMENT_PATH = os.path.join(ANALYSE_DIR, f"{EQUIPE}_04-analyse_{DEFI}_analyst_classement-regions-parite_v2.csv")
+CLASSEMENT_PATH = os.path.join(ANALYSE_DIR, f"{PREFIX}_04-analyse_{DEFI}_analyst_classement-regions-parite_v2.csv")
 with open(CLASSEMENT_PATH, "w", encoding="utf-8-sig", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=list(classement[0].keys()), delimiter=";")
     writer.writeheader()
@@ -137,7 +137,7 @@ for reg in regions:
 
 pentes_evolution.sort(key=lambda x: x["pente_annuelle_ips"], reverse=True)
 
-PENTES_PATH = os.path.join(ANALYSE_DIR, f"{EQUIPE}_04-analyse_{DEFI}_scientist_pentes-evolution-convergence_v2.csv")
+PENTES_PATH = os.path.join(ANALYSE_DIR, f"{PREFIX}_04-analyse_{DEFI}_scientist_pentes-evolution-convergence_v2.csv")
 with open(PENTES_PATH, "w", encoding="utf-8-sig", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=list(pentes_evolution[0].keys()), delimiter=";")
     writer.writeheader()
@@ -161,7 +161,7 @@ for idx, row in enumerate(panel_mil):
         rec["croissance_rural_annuelle_pct"] = c_r
     analyse_milieu.append(rec)
 
-OUT_MIL_ANALYSE = os.path.join(ANALYSE_DIR, f"{EQUIPE}_04-analyse_{DEFI}_analyst_analyse-urbain-rural_v2.csv")
+OUT_MIL_ANALYSE = os.path.join(ANALYSE_DIR, f"{PREFIX}_04-analyse_{DEFI}_analyst_analyse-urbain-rural_v2.csv")
 with open(OUT_MIL_ANALYSE, "w", encoding="utf-8-sig", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=list(analyse_milieu[0].keys()), delimiter=";")
     writer.writeheader()
@@ -194,7 +194,7 @@ correlations_res = [
     }
 ]
 
-CORR_PATH = os.path.join(ANALYSE_DIR, f"{EQUIPE}_04-analyse_{DEFI}_scientist_correlations-facteurs-associes_v2.csv")
+CORR_PATH = os.path.join(ANALYSE_DIR, f"{PREFIX}_04-analyse_{DEFI}_scientist_correlations-facteurs-associes_v2.csv")
 with open(CORR_PATH, "w", encoding="utf-8-sig", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=list(correlations_res[0].keys()), delimiter=";")
     writer.writeheader()
@@ -203,7 +203,7 @@ print(f"OK: CorrÃ©lations facteurs associÃ©s gÃ©nÃ©rÃ©es")
 
 
 print("=== 6. NOTE QUALITATIVE : ORPAILLAGE ===")
-ORPAILLAGE_PATH = os.path.join(ANALYSE_DIR, f"{EQUIPE}_04-analyse_{DEFI}_analyst_contexte-orpaillage-qualitatif_v2.md")
+ORPAILLAGE_PATH = os.path.join(ANALYSE_DIR, f"{PREFIX}_04-analyse_{DEFI}_analyst_contexte-orpaillage-qualitatif_v2.md")
 with open(ORPAILLAGE_PATH, "w", encoding="utf-8") as f:
     f.write("""# Orpaillage - cadrage qualitatif v2
 

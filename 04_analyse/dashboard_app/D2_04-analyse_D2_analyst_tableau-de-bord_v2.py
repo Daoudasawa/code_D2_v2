@@ -1,7 +1,7 @@
 # « On ne développe pas, on se développe » — l’éthique de l’éducation en Afrique : sur les traces de Joseph Ki-Zerbo
 """
 Application Interactive Streamlit — Défi 2 : Disparités d'accès à l'éducation au Burkina Faso.
-Équipe : TEAMDATALYS (Data Challenge Burkina 2026)
+Data Challenge Burkina 2026
 Livrable réexécutable en environnement local autonome.
 """
 
@@ -26,19 +26,19 @@ def charger_donnees():
     analyse_dir = base_dir
     
     panel_reg = pd.read_csv(
-        os.path.join(transfo_dir, "TEAMDATALYS_03-transformation_D2_architect_panel-regional-education-10ans_v2.csv"),
+        os.path.join(transfo_dir, "D2_03-transformation_D2_architect_panel-regional-education-10ans_v2.csv"),
         sep=";"
     )
     panel_mil = pd.read_csv(
-        os.path.join(transfo_dir, "TEAMDATALYS_03-transformation_D2_engineer_panel-national-milieu-10ans_v2.csv"),
+        os.path.join(transfo_dir, "D2_03-transformation_D2_engineer_panel-national-milieu-10ans_v2.csv"),
         sep=";"
     )
     pentes = pd.read_csv(
-        os.path.join(analyse_dir, "TEAMDATALYS_04-analyse_D2_scientist_pentes-evolution-convergence_v2.csv"),
+        os.path.join(analyse_dir, "D2_04-analyse_D2_scientist_pentes-evolution-convergence_v2.csv"),
         sep=";"
     )
     classement = pd.read_csv(
-        os.path.join(analyse_dir, "TEAMDATALYS_04-analyse_D2_analyst_classement-regions-parite_v2.csv"),
+        os.path.join(analyse_dir, "D2_04-analyse_D2_analyst_classement-regions-parite_v2.csv"),
         sep=";"
     )
     return panel_reg, panel_mil, pentes, classement
@@ -47,7 +47,7 @@ panel_reg, panel_mil, pentes, classement = charger_donnees()
 
 # 2. Barre latérale (Filtres)
 st.sidebar.title("Paramètres et filtres")
-st.sidebar.markdown("**Équipe :** TEAMDATALYS  \n**Défi :** DÉFI 2 (Parité F/G & Milieu)")
+st.sidebar.markdown("\n**Défi :** DÉFI 2 (Parité F/G & Milieu)")
 
 OPTION_PERIODE = "Total 2015–2025"
 annees_dispos = sorted(panel_reg["annee_scolaire"].unique().tolist()) + [OPTION_PERIODE]
@@ -128,7 +128,7 @@ with st.expander("Trois lectures des ecarts - indicateurs distincts", expanded=T
     st.markdown("**A - IPS du TBS.** En 2024-2025, le Sahel a l'IPS du TBS le plus bas des 13 regions (0.9087), indiquant un TBS des filles inferieur a celui des garcons. Au niveau national, les ratios d'effectifs filles/garcons sont de 1.0121 en ville et 0.9716 en milieu rural; ce ne sont pas des IPS du TBS.")
     st.markdown("**B - Ratio des effectifs.** En 2024-2025, le ratio filles/garcons est de 0.8935 au Sahel et de 1.028 au Centre-Ouest. Au niveau national, les ratios calcules par sommes d'effectifs sont 1.0121 en ville et 0.9716 en milieu rural; ils ne sont pas la moyenne des IPS regionaux.")
     st.markdown("**C - TBS par sexe.** En 2024-2025, le Sahel a un TBS de 26.2841 % pour les filles et 28.9248 % pour les garcons. Les donnees urbain-rural disponibles portent sur les effectifs, pas sur des TBS ventiles par milieu.")
-    st.caption("Source : classeur DGESS recu, Feuil1 et Feuil7; panel regional et analyse urbain-rural v2. Trois options presentees selon la demande de l'equipe.")
+    st.caption("Source : classeur DGESS recu, Feuil1 et Feuil7; panel regional et analyse urbain-rural v2. Trois options presentees selon les besoins de l'analyse.")
 
 # 4. Onglets thématiques
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
@@ -301,6 +301,6 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #555; padding: 15px; font-style: italic;">
 « On ne développe pas, on se développe »  l’éthique de l’éducation en Afrique : sur les traces de Joseph Ki-Zerbo<br>
-<strong>Data Challenge Burkina (Édition Éducation 2026)  Solution développée par Team Datalys (Défi 2)</strong>
+<strong>Data Challenge Burkina (Édition Éducation 2026)  Solution développée par Solution du Défi 2</strong>
 </div>
 """, unsafe_allow_html=True)
