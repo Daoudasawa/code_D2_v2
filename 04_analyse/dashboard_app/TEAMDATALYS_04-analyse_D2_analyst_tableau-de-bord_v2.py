@@ -300,7 +300,7 @@ with tab5:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #555; padding: 15px; font-style: italic;">
-« On ne développe pas, on se développe » — l’éthique de l’éducation en Afrique : sur les traces de Joseph Ki-Zerbo<br>
-<strong>Data Challenge Burkina (Édition Éducation 2026) — Solution développée par Team Datalys (Défi 2)</strong>
+« On ne développe pas, on se développe »  l’éthique de l’éducation en Afrique : sur les traces de Joseph Ki-Zerbo<br>
+<strong>Data Challenge Burkina (Édition Éducation 2026)  Solution développée par Team Datalys (Défi 2)</strong>
 </div>
 """, unsafe_allow_html=True)
