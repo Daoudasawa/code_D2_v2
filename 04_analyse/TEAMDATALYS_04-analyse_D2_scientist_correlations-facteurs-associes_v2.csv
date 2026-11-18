@@ -1,0 +1,3 @@
+﻿relation_testee;coefficient_pearson_r;signification;limites_statistiques
+Eleves par ecole vs IPS du TBS;0.1742;"Correlation descriptive positive faible recalculee sur panel v2 (r=+0.1742); aucune causalite n'est inferee.";"130 observations region-annee (13 regions x 10 ans), non independantes. La valeur v1 publiee etait r=0.1476; le calcul v2 utilise les jointures corrigees."
+TBS total vs IPS du TBS;0.3319;"Correlation descriptive recalculee sur panel v2 (r=+0.3319); aucune causalite n'est inferee.";"130 observations region-annee (13 regions x 10 ans), non independantes; donnees agregees regionalement."

@@ -1,0 +1,1 @@
+Scripts d analyse et resultats v2. Le tableau de bord lit les panels et tables de classement/tendance.
